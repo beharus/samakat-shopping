@@ -1,0 +1,69 @@
+@import './font.scss';
+@import './responsive.scss';
+@import './component.scss';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ffffff;
+    min-height: 100vw;
+    padding: 0 15%;
+    
+
+    a{
+        text-decoration: none;
+    }
+
+    .nav-tagi{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+
+
+        .right{
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            column-gap: 13px;
+
+            img{
+                cursor: pointer;
+            }
+
+            p{
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 119.3%;
+                color: #323941;
+                cursor: pointer;
+            }
+            a{
+                color: #009EFF;
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 119.3%;
+            }
+        }
+    }
+
+
+
+
+
+
+
+    @media(max-width: $responsive_md){
+        .nav-tagi{
+            display: none;
+        }
+    }
+}

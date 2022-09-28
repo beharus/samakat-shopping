@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNovaRegular.eot");
+  src: url("../fonts/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular.ttf") format("truetype"), url("../fonts/ProximaNovaRegular.svg#webfont") format("svg");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  min-height: 100vw;
+  padding: 0 15%;
+}
+body a {
+  text-decoration: none;
+}
+body .nav-tagi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+body .nav-tagi .right {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 13px;
+}
+body .nav-tagi .right img {
+  cursor: pointer;
+}
+body .nav-tagi .right p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 119.3%;
+  color: #323941;
+  cursor: pointer;
+}
+body .nav-tagi .right a {
+  color: #009EFF;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 119.3%;
+}
+@media (max-width: 767px) {
+  body .nav-tagi {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
