@@ -12,7 +12,6 @@
 body {
   background: #ffffff;
   min-height: 100vw;
-  padding: 0 15%;
 }
 body a {
   text-decoration: none;
@@ -22,6 +21,7 @@ body .nav-tagi {
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
+  padding: 0 12%;
 }
 body .nav-tagi .right {
   display: grid;
@@ -48,6 +48,36 @@ body .nav-tagi .right a {
   font-weight: 400;
   font-size: 13px;
   line-height: 119.3%;
+}
+body .nav-tagi-carousel {
+  padding: 0 12%;
+  background: #323941;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+}
+body .nav-tagi-carousel .items {
+  position: relative;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  align-content: end;
+  height: 130px;
+  border: 1px solid #fff;
+}
+body .nav-tagi-carousel .items .item1 {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+}
+body .nav-tagi-carousel .items .item1 img {
+  display: block;
+  margin: auto;
+}
+body .nav-tagi-carousel .items .item1 p {
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   body .nav-tagi {
