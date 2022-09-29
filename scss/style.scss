@@ -1,7 +1,7 @@
 @import './font.scss';
 @import './root.scss';
 @import './component.scss';
-
+@import './extends.scss';
 
 *{
     margin: 0;
@@ -48,6 +48,7 @@ body{
                 line-height: 119.3%;
                 color: #323941;
                 cursor: pointer;
+                transition: $transition;
             }
             a{
                 color: #009EFF;
@@ -80,13 +81,14 @@ body{
             font-size: 18px;
             line-height: 22px;
             align-content: end;
-            height: 130px;
-            border: 1px solid #fff;
+            transition: $transition;
+            padding-top: 25px;
+            cursor: pointer;
 
 
             .item1{
                 display: grid;
-                grid-auto-rows: minmax(100px, auto);
+                grid-auto-rows: minmax(50px, auto);
                     
                 img{
                     display: block;
@@ -96,8 +98,15 @@ body{
                 p{
                     display: flex;
                     justify-content: center;
+                    transition: $transition;
                 }
             }
+        }
+        .items:hover{
+            @extend %card-hover;
+        }
+        .items.active{
+            @extend %card-hover;
         }
     }
 

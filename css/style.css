@@ -3,6 +3,18 @@
   src: url("../fonts/ProximaNovaRegular.eot");
   src: url("../fonts/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular.ttf") format("truetype"), url("../fonts/ProximaNovaRegular.svg#webfont") format("svg");
 }
+body .nav-tagi-carousel .items.active, body .nav-tagi-carousel .items:hover {
+  background: #009EFF;
+}
+body .nav-tagi-carousel .items.active p, body .nav-tagi-carousel .items:hover p {
+  color: #FFFFFF;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +52,7 @@ body .nav-tagi .right p {
   line-height: 119.3%;
   color: #323941;
   cursor: pointer;
+  transition: 0.75s;
 }
 body .nav-tagi .right a {
   color: #009EFF;
@@ -64,12 +77,13 @@ body .nav-tagi-carousel .items {
   font-size: 18px;
   line-height: 22px;
   align-content: end;
-  height: 130px;
-  border: 1px solid #fff;
+  transition: 0.75s;
+  padding-top: 25px;
+  cursor: pointer;
 }
 body .nav-tagi-carousel .items .item1 {
   display: grid;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(50px, auto);
 }
 body .nav-tagi-carousel .items .item1 img {
   display: block;
@@ -78,6 +92,7 @@ body .nav-tagi-carousel .items .item1 img {
 body .nav-tagi-carousel .items .item1 p {
   display: flex;
   justify-content: center;
+  transition: 0.75s;
 }
 @media (max-width: 767px) {
   body .nav-tagi {
