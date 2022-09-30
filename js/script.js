@@ -26,3 +26,25 @@
                   this.classList.add("active");  
                 };
             }
+
+
+
+
+
+ // draggable carousel code
+    $('.cards').owlCarousel({
+    items:2,
+    loop:false,
+    margin:200,
+    responsive:{
+        600:{
+            items:4
+        },
+        400:{
+            items:3
+        },
+        0:{
+            items:3
+        }
+    }
+});

@@ -3,10 +3,10 @@
   src: url("../fonts/ProximaNovaRegular.eot");
   src: url("../fonts/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular.ttf") format("truetype"), url("../fonts/ProximaNovaRegular.svg#webfont") format("svg");
 }
-body .nav-tagi-carousel .items.active, body .nav-tagi-carousel .items:hover {
+body .container .items.active, body .container .items:hover, body .nav-tagi-carousel .items.active, body .nav-tagi-carousel .items:hover {
   background: #009EFF;
 }
-body .nav-tagi-carousel .items.active p, body .nav-tagi-carousel .items:hover p {
+body .container .items.active p, body .container .items:hover p, body .nav-tagi-carousel .items.active p, body .nav-tagi-carousel .items:hover p {
   color: #FFFFFF;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -71,12 +71,6 @@ body .nav-tagi-carousel {
 }
 body .nav-tagi-carousel .items {
   position: relative;
-  font-family: "Proxima Nova";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  align-content: end;
   transition: 0.75s;
   padding-top: 25px;
   cursor: pointer;
@@ -90,9 +84,77 @@ body .nav-tagi-carousel .items .item1 img {
   margin: auto;
 }
 body .nav-tagi-carousel .items .item1 p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  align-content: end;
   display: flex;
   justify-content: center;
   transition: 0.75s;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+body .nav-tagi-carousel .items:hover .item1 p {
+  color: #ffffff;
+  opacity: 1;
+}
+body .nav-tagi-carousel .items.active .item1 p {
+  color: #ffffff;
+  opacity: 1;
+}
+body .container {
+  position: relative;
+  background: #323941;
+  display: none;
+  padding: 2%;
+  /* border-top: 10px solid #f00; */
+}
+body .container .items {
+  width: 30vw;
+  height: auto;
+  position: relative;
+  transition: 0.75s;
+  padding-top: 25px;
+  cursor: pointer;
+}
+body .container .items .item1 {
+  display: grid;
+  grid-auto-rows: minmax(50px, auto);
+}
+body .container .items .item1 img {
+  display: block;
+  margin: auto;
+}
+body .container .items .item1 p {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  align-content: end;
+  display: flex;
+  justify-content: center;
+  transition: 0.75s;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+body .container .items:hover .item1 p {
+  color: #ffffff;
+  opacity: 1;
+}
+body .container .items.active .item1 p {
+  color: #ffffff;
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  body .nav-tagi-carousel .items {
+    display: none;
+  }
+  body .container {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   body .nav-tagi {

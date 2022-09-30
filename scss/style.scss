@@ -75,12 +75,6 @@ body{
 
         .items{
             position: relative;
-            font-family: 'Proxima Nova';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 22px;
-            align-content: end;
             transition: $transition;
             padding-top: 25px;
             cursor: pointer;
@@ -96,19 +90,98 @@ body{
                 }
 
                 p{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    align-content: end;
                     display: flex;
                     justify-content: center;
                     transition: $transition;
+                    color: #FFFFFF;
+                    opacity: 0.4;
                 }
             }
         }
         .items:hover{
             @extend %card-hover;
         }
+        .items:hover .item1 p{
+            color: #ffffff;
+            opacity: 1;
+        }
+        .items.active .item1 p{
+            color: #ffffff;
+            opacity: 1;
+        }
         .items.active{
             @extend %card-hover;
         }
     }
+
+    
+        //carousel small ekranda
+
+    .container {
+        position: relative;
+        background: #323941;
+        display: none;
+        padding: 2%;
+        /* border-top: 10px solid #f00; */
+
+
+
+        
+        .items{
+            width: 30vw;
+            height: auto;
+            position: relative;
+            transition: $transition;
+            padding-top: 25px;
+            cursor: pointer;
+
+
+            .item1{
+                display: grid;
+                grid-auto-rows: minmax(50px, auto);
+                    
+                img{
+                    display: block;
+                    margin: auto;
+                }
+
+                p{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    align-content: end;
+                    display: flex;
+                    justify-content: center;
+                    transition: $transition;
+                    color: #FFFFFF;
+                    opacity: 0.4;
+                }
+            }
+        }
+        .items:hover{
+            @extend %card-hover;
+        }
+        .items:hover .item1 p{
+            color: #ffffff;
+            opacity: 1;
+        }
+        .items.active .item1 p{
+            color: #ffffff;
+            opacity: 1;
+        }
+        .items.active{
+            @extend %card-hover;
+        }
+    }
+      
 
 
 
@@ -117,9 +190,23 @@ body{
 
     //responsive
 
+    @media(max-width:$responsive_xl){
+        .nav-tagi-carousel .items{
+            display: none;
+        }
+        .container{
+            display: block;
+        }
+    }
+
     @media(max-width: $responsive_md){
         .nav-tagi{
             display: none;
         }
+    }
+
+
+    @media(max-width: $responsive_sm){
+
     }
 }

@@ -5,54 +5,168 @@
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <style>
+        <style>*,
+            *::before,
+            *::after {
+              box-sizing: border-box;
+            }
             
-            .parent{overflow: hidden;margin-top:50px;}
+            body {
+              font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+              min-height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
             
-            .child{width:200px;height: 150px;float: left;margin-left:20px;border:1px solid #000;
-                   text-align:center;line-height:150px;cursor: pointer;background-color:#ddd;}
+            /* global */
+            img {
+              width: 100%;
+            }
             
-            .bak{ background-color: red; color: #fff; font-weight:bold; }
+            h1 {
+              margin: 0.5rem 0;
+            }
             
+            /* container and cards */
+            .container {
+              position: relative;
+              width: 1000px;
+              height: 400px;
+              overflow: hidden;
+              cursor: grab;
+              /* border-top: 10px solid #f00; */
+            }
+            
+            .cards {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: grid;
+              grid-template-columns: repeat(6, 300px);
+              grid-gap: 50px;
+              pointer-events: none;
+              /* border-bottom: 10px solid #00f; */
+            }
+            
+            .card {
+              border: 1px solid #ccc;
+              border-radius: 1rem;
+              overflow: hidden;
+              box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+            }
+            
+            .card__content {
+              color: #4e4e4e;
+              padding: 1rem;
+            }
         </style>
         
     </head>
     <body>
-        
-        <div class="parent">
-            <div class="child">DIV1</div>
-            <div class="child">DIV2</div>
-            <div class="child">DIV3</div>
-            <div class="child">DIV4</div>
-            <div class="child">DIV5</div>
+        <div class="container">
+          <div class="cards">
+            <div class="card">
+              <img src="./imgs/pic1.jpg" alt="" />
+              <div class="card__content">
+                <h1>Heading 1</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                  voluptatibus!
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./imgs/pic2.jpg" alt="" />
+              <div class="card__content">
+                <h1>Heading 2</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                  voluptatibus!
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./imgs/pic3.jpg" alt="" />
+              <div class="card__content">
+                <h1>Heading 3</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                  voluptatibus!
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./imgs/pic4.jpg" alt="" />
+              <div class="card__content">
+                <h1>Heading 4</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                  voluptatibus!
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./imgs/pic5.jpg" alt="" />
+              <div class="card__content">
+                <h1>Heading 5</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                  voluptatibus!
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./imgs/pic6.jpg" alt="" />
+              <div class="card__content">
+                <h1>Heading 6</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                  voluptatibus!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <script>
+        <script>const container = document.querySelector(".container");
+            const cards = document.querySelector(".cards");
             
-            var elements = document.getElementsByClassName("child");
-            for(var i = 0; i < elements.length; i++)
-            {
-                elements[i].onclick = function(){
-                    
-                    // remove class from sibling
-                    
-                    var el = elements[0];
-                    while(el)
-                    {
-                        if(el.tagName === "DIV"){
-                            //remove class
-                            el.classList.remove("bak");
-                            
-                        }
-                        // pass to the new sibling
-                        el = el.nextSibling;
-                    }
-                    
-                  this.classList.add("bak");  
-                };
-            }
+            /* keep track of user's mouse down and up */
+            let isPressedDown = false;
+            /* x horizontal space of cursor from inner container */
+            let cursorXSpace;
             
-        </script>    
+            container.addEventListener("mousedown", (e) => {
+              isPressedDown = true;
+              cursorXSpace = e.offsetX - cards.offsetLeft;
+              container.style.cursor = "grabbing";
+            });
+            
+            container.addEventListener("mouseup", () => {
+              container.style.cursor = "grab";
+            });
+            
+            window.addEventListener("mouseup", () => {
+              isPressedDown = false;
+            });
+            
+            container.addEventListener("mousemove", (e) => {
+              if (!isPressedDown) return;
+              e.preventDefault();
+              cards.style.left = `${e.offsetX - cursorXSpace}px`;
+              boundCards();
+            });
+            
+            function boundCards() {
+              const container_rect = container.getBoundingClientRect();
+              const cards_rect = cards.getBoundingClientRect();
+            
+              if (parseInt(cards.style.left) > 0) {
+                cards.style.left = 0;
+              } else if (cards_rect.right < container_rect.right) {
+                cards.style.left = `-${cards_rect.width - container_rect.width}px`;
+              }
+            }</script>
         
     </body>
 </html>
