@@ -1,0 +1,20 @@
+.braking-system {
+  padding: 150px 0 146px;
+  background: url(../images/braking-system-bg-img.png) no-repeat;
+
+  &__inner {
+    margin-left: auto;
+    max-width: 375px;
+  }
+
+  &__title,
+  .title-black {
+    color: $text-color-black;
+    @include title-mb;
+  }
+
+  &__text,
+  .text-black {
+    color: $text-color-black;
+  }
+}

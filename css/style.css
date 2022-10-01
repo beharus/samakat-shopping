@@ -1,7 +1,51 @@
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/ProximaNovaRegular.eot");
-  src: url("../fonts/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular.ttf") format("truetype"), url("../fonts/ProximaNovaRegular.svg#webfont") format("svg");
+  src: url(../fonts/ProximaNova-Thin.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Thin.woff) format(woff);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Light.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Light.woff) format(woff);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Regular.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Regular.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Semibold.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Semibold.woff) format(woff);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Bold.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Bold.woff) format(woff);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Extrabld.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Extrabld.woff) format(woff);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Black.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Black.woff) format(woff);
+  font-weight: 900;
+  font-style: normal;
 }
 body .container .items.active, body .container .items:hover, body .nav-tagi-carousel .items.active, body .nav-tagi-carousel .items:hover {
   background: #009EFF;
@@ -209,7 +253,7 @@ body .main .top h1 {
   border: 3px solid #FFFFFF;
 }
 body .main .bottom {
-  border: 2px solid rgba(153, 153, 153, 0.2549019608);
+  border: 2px solid #99999941;
   padding: 23px 20px;
 }
 body .main .bottom .discr {
@@ -248,7 +292,7 @@ body .main .bottom .btn-group button {
   transition: 0.75s;
 }
 body .main .bottom .btn-group button:hover {
-  background: rgba(153, 153, 153, 0.2078431373);
+  background: #99999935;
 }
 body .main .bottom .davomi {
   display: flex;

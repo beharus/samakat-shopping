@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Thin.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Thin.woff) format(woff);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Light.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Light.woff) format(woff);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Regular.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Regular.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Semibold.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Semibold.woff) format(woff);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Bold.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Bold.woff) format(woff);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Extrabld.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Extrabld.woff) format(woff);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url(../fonts/ProximaNova-Black.woff2) format(woff2);
+  src: url(../fonts/ProximaNova-Black.woff) format(woff);
+  font-weight: 900;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 59px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.container {
+  max-width: 1024px;
+  padding: 0 35px;
+  margin: 0 auto;
+}
+
+.smart-bms {
+  padding: 153px 0 152px;
+  background: url(../images/smart-bms-bg-full.png);
+  background-size: cover;
+  background-position: center;
+}
+.smart-bms__inner {
+  position: relative;
+  max-width: 560px;
+  z-index: 10;
+}
+.smart-bms__title, .smart-bms .title-white {
+  color: #fff;
+  margin-bottom: 18px;
+}
+.smart-bms__text, .smart-bms .text-white {
+  color: #fff;
+}
+
+.braking-system {
+  padding: 150px 0 146px;
+  background: url(../images/braking-system-bg-img.png) no-repeat;
+}
+.braking-system__inner {
+  margin-left: auto;
+  max-width: 375px;
+}
+.braking-system__title,
+.braking-system .title-black {
+  color: #323941;
+  margin-bottom: 18px;
+}
+.braking-system__text,
+.braking-system .text-black {
+  color: #323941;
+}
+
+/*# sourceMappingURL=main.css.map */

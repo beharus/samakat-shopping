@@ -1,4 +1,4 @@
-@import './font.scss';
+@import './_fonts.scss';
 @import './root.scss';
 @import './component.scss';
 @import './extends.scss';
@@ -11,7 +11,7 @@
 body{
     background: #ffffff;
     min-height: 100vw;
-    
+
 
     a{
         text-decoration: none;
@@ -83,7 +83,7 @@ body{
             .item1{
                 display: grid;
                 grid-auto-rows: minmax(50px, auto);
-                    
+
                 img{
                     display: block;
                     margin: auto;
@@ -120,7 +120,7 @@ body{
         }
     }
 
-    
+
         //carousel small ekranda
 
     .container {
@@ -132,7 +132,7 @@ body{
 
 
 
-        
+
         .items{
             width: 23vw;
             height: auto;
@@ -145,7 +145,7 @@ body{
             .item1{
                 display: grid;
                 grid-auto-rows: minmax(50px, auto);
-                    
+
                 img{
                     display: block;
                     margin: auto;
@@ -181,7 +181,7 @@ body{
             @extend %card-hover;
         }
     }
-    
+
 
 
     //blue
@@ -217,7 +217,7 @@ body{
         align-items: start;
         grid-auto-rows: min-content;
         grid-column-gap: 8%;
-        
+
         //H1 grid qismi
         .top{
             grid-column-start: 1;
@@ -269,7 +269,7 @@ body{
                 font-size: 18px;
                 line-height: 22px;
                 margin-bottom: 8px;
-                
+
                 span{
                     font-weight: 900;
                 }
@@ -400,7 +400,7 @@ body{
             grid-template-columns: 1fr;
             justify-content: center;
             grid-auto-rows: min-content;
-                
+
             .right{
                 height: auto;
                 grid-column-start: 1;
@@ -413,7 +413,7 @@ body{
                 grid-column-start: 1;
                 grid-row-start: 3;
             }
-    
+
         }
     }
 
@@ -422,7 +422,7 @@ body{
             display: none;
         }
         .container{
-            
+
             .items{
                 width: 25vw;
             }
@@ -431,9 +431,9 @@ body{
 
 
     @media(max-width: $responsive_sm){
-        
+
         .container{
-            
+
             .items{
                 width: 30vw;
             }
