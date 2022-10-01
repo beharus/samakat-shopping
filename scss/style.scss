@@ -495,8 +495,14 @@ body{
             }
 
             .right{
-                
-                .carousel-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+                .carousel-img{
+                    display: flex;
+                    justify-content: center;
                     width: 50%;
                     margin-top: 25px;
                     margin-bottom: 25px;
@@ -573,7 +579,6 @@ body{
             }
 
             .right{
-                display: block;
 
                 .gift-card-sm{
                     display: block;

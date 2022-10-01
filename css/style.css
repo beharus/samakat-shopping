@@ -393,7 +393,14 @@ body .main .right .gift-card-sm .content .right1 img {
     margin: 0 28px;
     padding-top: 18px;
   }
-  body .main .right .carousel-card {
+  body .main .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body .main .right .carousel-img {
+    display: flex;
+    justify-content: center;
     width: 50%;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -440,9 +447,6 @@ body .main .right .gift-card-sm .content .right1 img {
   }
   body .main .bottom .davomi img {
     display: none;
-  }
-  body .main .right {
-    display: block;
   }
   body .main .right .gift-card-sm {
     display: block;
