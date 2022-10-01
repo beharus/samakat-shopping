@@ -134,7 +134,7 @@ body{
 
         
         .items{
-            width: 30vw;
+            width: 23vw;
             height: auto;
             position: relative;
             transition: $transition;
@@ -213,45 +213,165 @@ body{
         margin: 14px 0;
         padding: $margin;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 40vw 40vw;
+        align-items: start;
+        grid-auto-rows: min-content;
+        grid-column-gap: 8%;
+        
+        //H1 grid qismi
+        .top{
+            grid-column-start: 1;
+            grid-column-end: 2;
 
-        .left{
+            .btn{
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 119.3%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #6ACD68;
+                border: 2px solid #6ACD68;
+                width: 90px;
+                height: 30px;
+                transition: .75s;
+            }
+            .btn:hover{
+                background-color: #6ACD68;
+                color: #FFFFFF;
+            }
 
-            .top{
+            h1{
 
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 87.3%;
+                text-transform: uppercase;
+                color: #323941;
+                border: 3px solid #FFFFFF;
+            }
+        }
 
-                .btn{
+        //payment qismi
+        .bottom{
+            border: 2px solid #99999941;
+            padding: 23px 20px;
+
+            .discr{
+                color: #323941;
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 8px;
+                
+                span{
+                    font-weight: 900;
+                }
+            }
+            .btn-group{
+                display: flex;
+                justify-content: center;
+                margin: auto -5px;
+                margin-bottom: 20px;
+
+                button{
+                    flex-basis: 32%;
+                    margin: 0 5px;
+                    border: 1px solid #999999;
+                    color: #323941;
                     font-family: 'Proxima Nova';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 13px;
                     line-height: 119.3%;
-                    display: flex;
+                    outline: 0;
+                    background: none;
+                    height: 36px;
                     align-items: center;
-                    justify-content: center;
-                    color: #6ACD68;
-                    border: 2px solid #6ACD68;
-                    width: 90px;
-                    height: 30px;
-                    transition: .75s;
+                    cursor: pointer;
+                    transition: $transition;
                 }
-                .btn:hover{
-                    background-color: #6ACD68;
-                    color: #FFFFFF;
+                button:hover{
+                    background: #99999935;
                 }
+            }
 
-                h1{
+            //urta qismi payment ning (laptop ekranda)
 
+            .davomi{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p{
+                    color: #323941;
                     font-family: 'Proxima Nova';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 80px;
-                    line-height: 87.3%;
-                    text-transform: uppercase;
-                    color: #323941;
-                    border: 3px solid #FFFFFF;
+                    font-size: 35px;
+                    line-height: 25px;
+                    margin-top: -15px;
+
+                    span{
+                        text-decoration-line: line-through;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+
+                a{
+                    color: #009EFF;
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 22px;
                 }
             }
+
+            //tulash kerak bulgan button qismi (end)
+
+            .end{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                a{
+                    border: 2px solid #009EFF;
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #fff;
+                    background: #009EFF;
+                    flex-basis: 48%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 48px;
+                    transition: $transition;
+                }
+                a:hover{
+                    background: none;
+                    color: #009EFF;
+                }
+            }
+        }
+
+        //carousel qismi
+        .right{
+            height: 100px;
+            grid-column-start: 2;
+            grid-row-start: 1;
         }
     }
 
@@ -263,11 +383,37 @@ body{
     //responsive
 
     @media(max-width:$responsive_xl){
-        .nav-tagi-carousel .items{
-            display: none;
+        .nav-tagi-carousel{
+            .items{
+               display: none;
+            }
         }
+
+
         .container{
             display: block;
+        }
+
+
+        .main{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            grid-auto-rows: min-content;
+                
+            .right{
+                height: auto;
+                grid-column-start: 1;
+                grid-row-start: 2;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .bottom{
+                grid-column-start: 1;
+                grid-row-start: 3;
+            }
+    
         }
     }
 
@@ -275,10 +421,22 @@ body{
         .nav-tagi{
             display: none;
         }
+        .container{
+            
+            .items{
+                width: 25vw;
+            }
+        }
     }
 
 
     @media(max-width: $responsive_sm){
-
+        
+        .container{
+            
+            .items{
+                width: 30vw;
+            }
+        }
     }
 }

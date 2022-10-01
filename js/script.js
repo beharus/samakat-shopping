@@ -35,8 +35,11 @@
     $('.cards').owlCarousel({
     items:2,
     loop:false,
-    margin:200,
+    margin:0,
     responsive:{
+        700:{
+            items:5
+        },
         600:{
             items:4
         },

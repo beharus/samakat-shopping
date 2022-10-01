@@ -112,7 +112,7 @@ body .container {
   /* border-top: 10px solid #f00; */
 }
 body .container .items {
-  width: 30vw;
+  width: 23vw;
   height: auto;
   position: relative;
   transition: 0.75s;
@@ -170,9 +170,16 @@ body .main {
   margin: 14px 0;
   padding: 0 12%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40vw 40vw;
+  align-items: start;
+  grid-auto-rows: min-content;
+  grid-column-gap: 8%;
 }
-body .main .left .top .btn {
+body .main .top {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+body .main .top .btn {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 400;
@@ -187,11 +194,11 @@ body .main .left .top .btn {
   height: 30px;
   transition: 0.75s;
 }
-body .main .left .top .btn:hover {
+body .main .top .btn:hover {
   background-color: #6ACD68;
   color: #FFFFFF;
 }
-body .main .left .top h1 {
+body .main .top h1 {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 700;
@@ -201,6 +208,107 @@ body .main .left .top h1 {
   color: #323941;
   border: 3px solid #FFFFFF;
 }
+body .main .bottom {
+  border: 2px solid rgba(153, 153, 153, 0.2549019608);
+  padding: 23px 20px;
+}
+body .main .bottom .discr {
+  color: #323941;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 8px;
+}
+body .main .bottom .discr span {
+  font-weight: 900;
+}
+body .main .bottom .btn-group {
+  display: flex;
+  justify-content: center;
+  margin: auto -5px;
+  margin-bottom: 20px;
+}
+body .main .bottom .btn-group button {
+  flex-basis: 32%;
+  margin: 0 5px;
+  border: 1px solid #999999;
+  color: #323941;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 119.3%;
+  outline: 0;
+  background: none;
+  height: 36px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.75s;
+}
+body .main .bottom .btn-group button:hover {
+  background: rgba(153, 153, 153, 0.2078431373);
+}
+body .main .bottom .davomi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main .bottom .davomi p {
+  color: #323941;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 25px;
+  margin-top: -15px;
+}
+body .main .bottom .davomi p span {
+  text-decoration-line: line-through;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+body .main .bottom .davomi a {
+  color: #009EFF;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+body .main .bottom .end {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+body .main .bottom .end a {
+  border: 2px solid #009EFF;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background: #009EFF;
+  flex-basis: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  transition: 0.75s;
+}
+body .main .bottom .end a:hover {
+  background: none;
+  color: #009EFF;
+}
+body .main .right {
+  height: 100px;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
 @media (max-width: 1024px) {
   body .nav-tagi-carousel .items {
     display: none;
@@ -208,10 +316,36 @@ body .main .left .top h1 {
   body .container {
     display: block;
   }
+  body .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-auto-rows: min-content;
+  }
+  body .main .right {
+    height: auto;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  body .main .bottom {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
 }
 @media (max-width: 767px) {
   body .nav-tagi {
     display: none;
+  }
+  body .container .items {
+    width: 25vw;
+  }
+}
+@media (max-width: 576px) {
+  body .container .items {
+    width: 30vw;
   }
 }
 
