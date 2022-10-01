@@ -148,6 +148,59 @@ body .container .items.active .item1 p {
   color: #ffffff;
   opacity: 1;
 }
+body .blue {
+  background: #009EFF;
+  height: 48px;
+  display: grid;
+  grid-template-columns: 100vw;
+  align-items: center;
+  justify-items: center;
+}
+body .blue span {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+body .main {
+  margin: 14px 0;
+  padding: 0 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .main .left .top .btn {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 119.3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6ACD68;
+  border: 2px solid #6ACD68;
+  width: 90px;
+  height: 30px;
+  transition: 0.75s;
+}
+body .main .left .top .btn:hover {
+  background-color: #6ACD68;
+  color: #FFFFFF;
+}
+body .main .left .top h1 {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 87.3%;
+  text-transform: uppercase;
+  color: #323941;
+  border: 3px solid #FFFFFF;
+}
 @media (max-width: 1024px) {
   body .nav-tagi-carousel .items {
     display: none;

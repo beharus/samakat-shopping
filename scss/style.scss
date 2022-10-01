@@ -181,7 +181,79 @@ body{
             @extend %card-hover;
         }
     }
-      
+    
+
+
+    //blue
+
+    .blue{
+        background: #009EFF;
+        height: 48px;
+        display: grid;
+        grid-template-columns: 100vw;
+        align-items: center;
+        justify-items: center;
+
+        span{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+
+
+    //main
+
+    .main{
+        margin: 14px 0;
+        padding: $margin;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .left{
+
+            .top{
+
+
+                .btn{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 119.3%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #6ACD68;
+                    border: 2px solid #6ACD68;
+                    width: 90px;
+                    height: 30px;
+                    transition: .75s;
+                }
+                .btn:hover{
+                    background-color: #6ACD68;
+                    color: #FFFFFF;
+                }
+
+                h1{
+
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 80px;
+                    line-height: 87.3%;
+                    text-transform: uppercase;
+                    color: #323941;
+                    border: 3px solid #FFFFFF;
+                }
+            }
+        }
+    }
 
 
 
