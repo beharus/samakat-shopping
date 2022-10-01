@@ -253,6 +253,7 @@ body{
                 text-transform: uppercase;
                 color: #323941;
                 border: 3px solid #FFFFFF;
+                transition: $transition;
             }
         }
 
@@ -372,6 +373,59 @@ body{
             height: 100px;
             grid-column-start: 2;
             grid-row-start: 1;
+
+            .carousel-card{
+            }
+
+
+            .gift-card-sm{
+                border: 5px solid #009EFF;
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 15px;
+                display: none;
+
+                .content{
+                    display: flex;
+                    justify-content: space-between;
+                    
+
+                    .left1{
+                        flex-basis: 58%;
+
+                        h2{
+                            text-transform: uppercase;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
+
+                        p{
+                            letter-spacing: 0.02em;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #323941;
+                        }
+                    }
+
+                    .right1{
+                        display: flex;
+                        justify-content: end;
+                        flex-basis: 35%;
+                        padding: 0;
+
+                        img{
+                            width: 70%;
+                        }
+                    }
+                }
+            
+            }
         }
     }
 
@@ -387,6 +441,11 @@ body{
             .items{
                display: none;
             }
+        }
+
+
+        .blue{
+            display: none;
         }
 
 
@@ -415,16 +474,65 @@ body{
             }
     
         }
+
+        .main{
+            .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                h1{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 57px;
+                    line-height: 92.8%;
+                    text-align: center;
+                    margin: 0 28px;
+                    padding-top: 18px;
+                }
+            }
+
+            .right{
+                
+                .carousel-card{
+                    width: 50%;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
     }
 
     @media(max-width: $responsive_md){
         .nav-tagi{
             display: none;
         }
+
         .container{
             
             .items{
                 width: 25vw;
+            }
+        }
+
+        .main{
+            .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                h1{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 37px;
+                    line-height: 92.8%;
+                    text-align: center;
+                    margin: 0 28px;
+                }
             }
         }
     }
@@ -436,6 +544,40 @@ body{
             
             .items{
                 width: 30vw;
+            }
+        }
+        
+        .main{
+
+            .bottom{
+
+                .discr{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .davomi{
+                    display: flex;
+                    justify-content: center;
+
+                    a{
+                        display: none;
+                    }
+
+                    img{
+                        display: none;
+                    }
+                }
+            }
+
+            .right{
+                display: block;
+
+                .gift-card-sm{
+                    display: block;
+                }
             }
         }
     }
