@@ -251,12 +251,18 @@ body .main .top h1 {
   text-transform: uppercase;
   color: #323941;
   border: 3px solid #FFFFFF;
+  transition: 0.75s;
 }
+<<<<<<< HEAD
 body .main .bottom {
   border: 2px solid #99999941;
+=======
+body .main .bottom .payment {
+  border: 2px solid rgba(153, 153, 153, 0.2549019608);
+>>>>>>> d594bfcbe7211423e7458bbb01a0554d85c46301
   padding: 23px 20px;
 }
-body .main .bottom .discr {
+body .main .bottom .payment .discr {
   color: #323941;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -265,16 +271,16 @@ body .main .bottom .discr {
   line-height: 22px;
   margin-bottom: 8px;
 }
-body .main .bottom .discr span {
+body .main .bottom .payment .discr span {
   font-weight: 900;
 }
-body .main .bottom .btn-group {
+body .main .bottom .payment .btn-group {
   display: flex;
   justify-content: center;
   margin: auto -5px;
   margin-bottom: 20px;
 }
-body .main .bottom .btn-group button {
+body .main .bottom .payment .btn-group button {
   flex-basis: 32%;
   margin: 0 5px;
   border: 1px solid #999999;
@@ -291,15 +297,20 @@ body .main .bottom .btn-group button {
   cursor: pointer;
   transition: 0.75s;
 }
+<<<<<<< HEAD
 body .main .bottom .btn-group button:hover {
   background: #99999935;
+=======
+body .main .bottom .payment .btn-group button:hover {
+  background: rgba(153, 153, 153, 0.2078431373);
+>>>>>>> d594bfcbe7211423e7458bbb01a0554d85c46301
 }
-body .main .bottom .davomi {
+body .main .bottom .payment .davomi {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body .main .bottom .davomi p {
+body .main .bottom .payment .davomi p {
   color: #323941;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -308,7 +319,7 @@ body .main .bottom .davomi p {
   line-height: 25px;
   margin-top: -15px;
 }
-body .main .bottom .davomi p span {
+body .main .bottom .payment .davomi p span {
   text-decoration-line: line-through;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -316,7 +327,7 @@ body .main .bottom .davomi p span {
   font-size: 18px;
   line-height: 22px;
 }
-body .main .bottom .davomi a {
+body .main .bottom .payment .davomi a {
   color: #009EFF;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -324,12 +335,12 @@ body .main .bottom .davomi a {
   font-size: 18px;
   line-height: 22px;
 }
-body .main .bottom .end {
+body .main .bottom .payment .end {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-body .main .bottom .end a {
+body .main .bottom .payment .end a {
   border: 2px solid #009EFF;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -344,17 +355,92 @@ body .main .bottom .end a {
   height: 48px;
   transition: 0.75s;
 }
-body .main .bottom .end a:hover {
+body .main .bottom .payment .end a:hover {
   background: none;
   color: #009EFF;
+}
+body .main .bottom .pay-card-method {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body .main .bottom .pay-card-method .method-type {
+  color: #999999;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+body .main .bottom .pay-card-method .method {
+  color: #009EFF;
+  cursor: pointer;
+}
+body .main .bottom .pay-card-method .method span {
+  color: #6ACD68;
+}
+body .main .bottom .pay-card-method .plastic-carta {
+  padding-top: 8px;
+  flex-basis: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  padding-bottom: 8px;
+  padding-left: 0.5%;
 }
 body .main .right {
   height: 100px;
   grid-column-start: 2;
   grid-row-start: 1;
 }
+body .main .right .gift-card-sm {
+  border: 5px solid #009EFF;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: none;
+}
+body .main .right .gift-card-sm .content {
+  display: flex;
+  justify-content: space-between;
+}
+body .main .right .gift-card-sm .content .left1 {
+  flex-basis: 58%;
+}
+body .main .right .gift-card-sm .content .left1 h2 {
+  text-transform: uppercase;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+body .main .right .gift-card-sm .content .left1 p {
+  letter-spacing: 0.02em;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #323941;
+}
+body .main .right .gift-card-sm .content .right1 {
+  display: flex;
+  justify-content: end;
+  flex-basis: 35%;
+  padding: 0;
+}
+body .main .right .gift-card-sm .content .right1 img {
+  width: 70%;
+}
 @media (max-width: 1024px) {
   body .nav-tagi-carousel .items {
+    display: none;
+  }
+  body .blue {
     display: none;
   }
   body .container {
@@ -378,6 +464,33 @@ body .main .right {
     grid-column-start: 1;
     grid-row-start: 3;
   }
+  body .main .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .main .top h1 {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 57px;
+    line-height: 92.8%;
+    text-align: center;
+    margin: 0 28px;
+    padding-top: 18px;
+  }
+  body .main .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body .main .right .carousel-img {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 767px) {
   body .nav-tagi {
@@ -386,10 +499,75 @@ body .main .right {
   body .container .items {
     width: 25vw;
   }
+  body .main .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .main .top h1 {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 92.8%;
+    text-align: center;
+    margin: 0 28px;
+  }
+  body .main .bottom .pay-card-method {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body .main .bottom .pay-card-method .method-type {
+    color: #999999;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  body .main .bottom .pay-card-method .method {
+    color: #009EFF;
+    cursor: pointer;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  body .main .bottom .pay-card-method .method span {
+    color: #6ACD68;
+  }
+  body .main .bottom .pay-card-method .method .plastic-carta {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
 @media (max-width: 576px) {
   body .container .items {
     width: 30vw;
+  }
+  body .main .bottom .discr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  body .main .bottom .davomi {
+    display: flex;
+    justify-content: center;
+  }
+  body .main .bottom .davomi a {
+    display: none;
+  }
+  body .main .bottom .davomi img {
+    display: none;
+  }
+  body .main .right .gift-card-sm {
+    display: block;
   }
 }
 

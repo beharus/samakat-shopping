@@ -253,11 +253,13 @@ body{
                 text-transform: uppercase;
                 color: #323941;
                 border: 3px solid #FFFFFF;
+                transition: $transition;
             }
         }
 
         //payment qismi
         .bottom{
+<<<<<<< HEAD
             border: 2px solid #99999941;
             padding: 23px 20px;
 
@@ -279,90 +281,159 @@ body{
                 justify-content: center;
                 margin: auto -5px;
                 margin-bottom: 20px;
+=======
+>>>>>>> d594bfcbe7211423e7458bbb01a0554d85c46301
 
-                button{
-                    flex-basis: 32%;
-                    margin: 0 5px;
-                    border: 1px solid #999999;
+
+            .payment{
+                border: 2px solid #99999941;
+                padding: 23px 20px;
+
+            
+                .discr{
                     color: #323941;
                     font-family: 'Proxima Nova';
                     font-style: normal;
                     font-weight: 400;
-                    font-size: 13px;
-                    line-height: 119.3%;
-                    outline: 0;
-                    background: none;
-                    height: 36px;
-                    align-items: center;
-                    cursor: pointer;
-                    transition: $transition;
-                }
-                button:hover{
-                    background: #99999935;
-                }
-            }
-
-            //urta qismi payment ning (laptop ekranda)
-
-            .davomi{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                p{
-                    color: #323941;
-                    font-family: 'Proxima Nova';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 35px;
-                    line-height: 25px;
-                    margin-top: -15px;
-
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin-bottom: 8px;
+                    
                     span{
-                        text-decoration-line: line-through;
+                        font-weight: 900;
+                    }
+                }
+                .btn-group{
+                    display: flex;
+                    justify-content: center;
+                    margin: auto -5px;
+                    margin-bottom: 20px;
+    
+                    button{
+                        flex-basis: 32%;
+                        margin: 0 5px;
+                        border: 1px solid #999999;
+                        color: #323941;
                         font-family: 'Proxima Nova';
                         font-style: normal;
                         font-weight: 400;
+                        font-size: 13px;
+                        line-height: 119.3%;
+                        outline: 0;
+                        background: none;
+                        height: 36px;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: $transition;
+                    }
+                    button:hover{
+                        background: #99999935;
+                    }
+                }
+    
+                //urta qismi payment ning (laptop ekranda)
+    
+                .davomi{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+    
+                    p{
+                        color: #323941;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 35px;
+                        line-height: 25px;
+                        margin-top: -15px;
+    
+                        span{
+                            text-decoration-line: line-through;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                    }
+    
+                    a{
+                        color: #009EFF;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 600;
                         font-size: 18px;
                         line-height: 22px;
                     }
                 }
+    
+                //tulash kerak bulgan button qismi (end)
+    
+                .end{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+    
+                    a{
+                        border: 2px solid #009EFF;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 18px;
+                        color: #fff;
+                        background: #009EFF;
+                        flex-basis: 48%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 48px;
+                        transition: $transition;
+                    }
+                    a:hover{
+                        background: none;
+                        color: #009EFF;
+                    }
+                }
+            }
+            
 
-                a{
-                    color: #009EFF;
+            //pay-metod
+            .pay-card-method{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+
+                .method-type{
+                    color: #999999;
                     font-family: 'Proxima Nova';
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 18px;
                     line-height: 22px;
                 }
-            }
 
-            //tulash kerak bulgan button qismi (end)
-
-            .end{
-                display: flex;
-                justify-content: space-between;
-                margin-top: 20px;
-
-                a{
-                    border: 2px solid #009EFF;
-                    font-family: 'Proxima Nova';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 18px;
-                    color: #fff;
-                    background: #009EFF;
-                    flex-basis: 48%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 48px;
-                    transition: $transition;
-                }
-                a:hover{
-                    background: none;
+                .method{
                     color: #009EFF;
+                    cursor: pointer;
+
+                    span{
+                        color: #6ACD68;
+                    }
+                }
+
+
+                .plastic-carta{
+                    padding-top: 8px;
+                    flex-basis: 100%;
+                    margin: auto;
+                    display: grid;
+                    grid-template-columns: repeat(17, 1fr);
+                    padding-bottom: 8px;
+                    padding-left: .5%;
                 }
             }
         }
@@ -372,6 +443,57 @@ body{
             height: 100px;
             grid-column-start: 2;
             grid-row-start: 1;
+
+
+
+            .gift-card-sm{
+                border: 5px solid #009EFF;
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 15px;
+                display: none;
+
+                .content{
+                    display: flex;
+                    justify-content: space-between;
+                    
+
+                    .left1{
+                        flex-basis: 58%;
+
+                        h2{
+                            text-transform: uppercase;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
+
+                        p{
+                            letter-spacing: 0.02em;
+                            font-family: 'Proxima Nova';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #323941;
+                        }
+                    }
+
+                    .right1{
+                        display: flex;
+                        justify-content: end;
+                        flex-basis: 35%;
+                        padding: 0;
+
+                        img{
+                            width: 70%;
+                        }
+                    }
+                }
+            
+            }
         }
     }
 
@@ -387,6 +509,11 @@ body{
             .items{
                display: none;
             }
+        }
+
+
+        .blue{
+            display: none;
         }
 
 
@@ -415,27 +542,160 @@ body{
             }
 
         }
+
+        .main{
+            .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                h1{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 57px;
+                    line-height: 92.8%;
+                    text-align: center;
+                    margin: 0 28px;
+                    padding-top: 18px;
+                }
+            }
+
+            .right{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+                .carousel-img{
+                    display: flex;
+                    justify-content: center;
+                    width: 50%;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
     }
 
     @media(max-width: $responsive_md){
         .nav-tagi{
             display: none;
         }
+
         .container{
 
             .items{
                 width: 25vw;
             }
         }
+
+        .main{
+            .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                h1{
+                    font-family: 'Proxima Nova';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 37px;
+                    line-height: 92.8%;
+                    text-align: center;
+                    margin: 0 28px;
+                }
+            }
+            .bottom{
+            
+                //pay-metod
+                .pay-card-method{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+    
+    
+                    .method-type{
+                        color: #999999;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+    
+                    .method{
+                        color: #009EFF;
+                        cursor: pointer;
+                        font-family: 'Proxima Nova';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 22px;
+    
+                        span{
+                            color: #6ACD68;
+                        }
+                        .plastic-carta{
+                            display: grid;
+                            grid-template-columns: repeat(8, 1fr);
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
     @media(max-width: $responsive_sm){
+<<<<<<< HEAD
 
+=======
+        
+        
+>>>>>>> d594bfcbe7211423e7458bbb01a0554d85c46301
         .container{
 
             .items{
                 width: 30vw;
+            }
+        }
+        
+        .main{
+
+            .bottom{
+
+                .discr{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .davomi{
+                    display: flex;
+                    justify-content: center;
+
+                    a{
+                        display: none;
+                    }
+
+                    img{
+                        display: none;
+                    }
+                }
+            }
+
+            .right{
+
+                .gift-card-sm{
+                    display: block;
+                }
             }
         }
     }
